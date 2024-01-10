@@ -19,7 +19,7 @@ switch ($_SERVER['REQUEST_METHOD']){
         $input= json_decode(file_get_contents('php://input'),true);
         $city = new City($input['name'],$input['population'],$input['country']);
         $city->updateCity($input['id'],$input['name'],$input['population'],$input['country']);
-        $result['message'] = "The city has been updated";
+        $result['message'] = "The city has been updated successfully";
         echo json_encode($result);
         break;
 
